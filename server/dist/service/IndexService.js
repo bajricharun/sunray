@@ -12,12 +12,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 class IndexService {
     constructor() {
         this.sortNumbers = (req) => __awaiter(this, void 0, void 0, function* () {
-            console.log("HERE");
             const { numbers, shouldFilter, filterToUse, filterBy } = req.body;
             const filterFunction = {
                 smallerThanN: this.filterSmallerThanN,
                 greaterThanN: this.filterGreaterThanN,
-                equalToN: this.filterEqualToN
+                equalToN: this.filterEqualToN,
             };
             let sortedNumbers = this.sort(numbers);
             if (shouldFilter && filterToUse) {
@@ -25,7 +24,7 @@ class IndexService {
                 if (!filterFunction) {
                     return {
                         message: "filter function not present",
-                        status: 500
+                        status: 500,
                     };
                 }
                 console.log(functionCall(sortedNumbers, filterBy));
@@ -33,7 +32,7 @@ class IndexService {
             }
             return {
                 message: sortedNumbers,
-                status: 200
+                status: 200,
             };
         });
         this.sort = (numbers) => {
