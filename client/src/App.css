@@ -1,0 +1,49 @@
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.editable {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.non-editable {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.prime-number {
+  background-color: green;
+}
+
+.editable > * {
+  width: 100px;
+}
+
+
+.non-editable > * {
+  width: 100px;
+}
+
+
+.buttonArea {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.container > * {
+  justify-self: center;
+  padding: 20px;
+  vertical-align: middle;
+}
